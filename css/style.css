@@ -1,5 +1,11 @@
 :root {
-
+  --font-size-sm: clamp(0.8rem, 0.17vw + 0.76rem, 0.89rem);
+  --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
+  --font-size-md: clamp(1.25rem, 0.61vw + 1.1rem, 1.58rem);
+  --font-size-lg: clamp(1.56rem, 1vw + 1.31rem, 2.11rem);
+  --font-size-xl: clamp(1.95rem, 1.56vw + 1.56rem, 2.81rem);
+  --font-size-xxl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
+  --font-size-xxxl: clamp(3.05rem, 3.54vw + 2.17rem, 5rem);
 }
 
 * {
@@ -29,5 +35,67 @@ img {
   max-width: 100%;
 }
 
+#header > div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+nav ul {
+  display: flex;
+  list-style-type: none;
+}
 
+nav ul li {
+  padding-right: 1.25em;
+}
+
+nav ul li a:link,
+nav ul li a:visited {
+    color:black;
+    text-decoration: none;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: var(--font-size-xl) 
+}
+
+h2 {
+  margin-top: 0;
+  font-size: var(--font-size-md);
+  text-align: center;
+}
+
+#about-us p {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  padding-left: 15%;
+}
+
+.photo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 2.5em;
+  gap: 1em;
+}
+
+.ice-cream {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.ice-cream article p {
+  text-align: center;
+}
+
+.ice-cream article h3 {
+  text-align: center;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+}
