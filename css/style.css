@@ -89,14 +89,30 @@ p {
   font-size: var(--font-size-base);
 }
 
-#about-us p {
-  display: flex;
-  flex-wrap: wrap;
-  width: 50%;
-  padding-left: 15%;
+.h2 {
+  text-align: center;
 }
 
-.photo {
+.dough {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.dough p {
+  width: 60%;
+}
+
+.quotes {
+  display:flex;
+  justify-content: space-evenly;
+}
+
+.quotes blockquote {
+  width: 60%;
+  text-align: center;
+}
+
+/* .photo {
   display:grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
@@ -120,7 +136,7 @@ p {
 .photo img:nth-child(4){
   grid-column: 2/2;
   grid-row: 2;
-}
+} */
 
 .button {
   background-color: black;
@@ -149,6 +165,11 @@ cite {
 }
 
 .ice-cream {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 1em;
+}
+/* .ice-cream {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1em;
@@ -172,7 +193,7 @@ cite {
 .ice-cream img:nth-child(4){
   grid-column: 4/4;
   grid-row: 1;
-}
+} */
 
 .ice-cream article p {
   text-align: center;
