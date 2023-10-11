@@ -40,6 +40,20 @@ img {
   margin: 0 auto;
 }
 
+#bite-me,
+#people,
+#shop {
+    padding: 2em 0;
+}
+
+#people .back-ground{
+  padding: 4em;
+}
+
+#about-us {
+  padding: 4em 0;
+}
+
 #header > div {
   display: flex;
   justify-content: space-between;
@@ -97,7 +111,7 @@ p {
 }
 
 .dough p {
-  width: 60%;
+  width: 40%;
 }
 
 .quotes {
@@ -106,8 +120,11 @@ p {
 }
 
 .quotes blockquote {
-  width: 60%;
-  text-align: center;
+  width: 20%;
+}
+
+.wrapper cite {
+  color: lightgray;
 }
 
 .grid {
@@ -151,11 +168,6 @@ p {
   background-color: black;
 }
 
-cite {
-  color: lightgray;
-
-}
-
 .ice-cream {
   display: flex;
   justify-content: flex-start;
@@ -182,8 +194,8 @@ footer {
     padding: 1em 0;
 }
 
-/* 1st @media query breakpoint starts here */
-/* @media (min-width: 400px){
+/*1st @media query breakpoint starts here */
+@media (min-width: 400px){
   .grid {
     grid-template-columns: 1fr 1fr;
   }
@@ -193,4 +205,4 @@ footer {
   .grid {
     grid-template-columns: 1fr 1fr 1fr 1fr;
   }
-} */
+}
