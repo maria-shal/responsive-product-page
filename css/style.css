@@ -38,22 +38,26 @@ img {
 .wrapper {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 1em;
+}
+
+hr {
+  border: 1px solid rgb(249, 247, 247);
+  width: 100%;
+  margin: 0 auto;
+  padding: 1em 0 1em 0;
 }
 
 #bite-me,
+#about-us,
 #people,
 #shop {
-    padding: 2em 0;
+  padding-top: 4em;
 }
 
-#people .back-ground{
-  padding: 4em;
+.photo {
+  padding-bottom: 4em;
 }
-
-#about-us {
-  padding: 4em 0;
-}
-
 #header > div {
   display: flex;
   justify-content: space-between;
@@ -63,10 +67,11 @@ img {
 nav ul {
   display: flex;
   list-style-type: none;
+  padding-left: 0;
 }
 
 nav ul li {
-  padding-right: 1.25em;
+  padding-left: 1.25em;
 }
 
 nav ul li a:link,
@@ -106,50 +111,38 @@ p {
 }
 
 .dough {
-  display:flex;
-  justify-content: space-evenly;
-}
-
-.dough p {
-  width: 40%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
 }
 
 .quotes {
-  display:flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
 }
 
-.quotes blockquote {
-  width: 20%;
-}
-
-.wrapper cite {
+cite {
+  display: block;
+  font-style: italic;
+  padding-top: 1em;
   color: lightgray;
 }
 
-.grid {
- display: flex;
- align-items: center;
+#bite-me .wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1em;
 }
 
 .photo {
-  flex: 1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr 1fr;
   gap: 1em;
 }
 
 .photo img {
-  width: 100%;
-  height: auto;
-}
-
-.text {
-  flex: 1;
-}
-
-.text {
-  padding-left: 20px;
+  border-radius: 2%;
 }
 
 .button {
@@ -161,11 +154,15 @@ p {
   margin: 2em 0 2em 0;
   color: white;
   text-decoration: none;
+  font-size: var(--font-size-sm);
+  border-radius: .25em;
 }
 
 .back-ground {
   color: white;
   background-color: black;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .ice-cream {
@@ -178,15 +175,19 @@ p {
 .ice-cream img {
   max-width: 100%;
   height: auto;
+  border-top-left-radius: 4%;
+  border-top-right-radius: 4%;
 }
 
-.ice-cream article p {
+.ice-cream article {
   text-align: center;
+  background-color:rgb(244, 244, 244);
+  border-radius: 4%;
 }
 
 .ice-cream article h3 {
   text-align: center;
-  padding-top: 20px;
+  padding-top: 0.5em;
 }
 
 footer {
@@ -194,15 +195,33 @@ footer {
     padding: 1em 0;
 }
 
-/*1st @media query breakpoint starts here */
-@media (min-width: 400px){
-  .grid {
-    grid-template-columns: 1fr 1fr;
+@media (max-width:60em) {
+#bite-me .wrapper {
+  display: block;
   }
 }
+@media (max-width: 38em){
+  .photo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+  }
 
-@media (min-width: 1280px){
-  .grid {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+  .quotes {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .dough {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .ice-cream {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .span-column {
+    grid-column: 1/4;
   }
 }
